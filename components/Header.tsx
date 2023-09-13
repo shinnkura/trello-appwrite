@@ -29,6 +29,13 @@ const Header = () => {
                 <Avatar name="shinnkura" size="40" round className='ml-2' />
             </div>
         </div>
+
+        <div className='flex items-center justify-center px-5 md:py-5'>
+            <p className='flex items-center p-5 text-sm font-light pr-5 shadow-xl rounded-xl w-fit bg-white italic max-w-3xl text-[#0055D1]'>
+                <UserCircleIcon className="inline-block h-6 w-6 text-[#0055D1] mr-1" />
+                summarising shinnkura tasks for the day ...
+            </p>
+        </div>
     </header>
   )
 }
