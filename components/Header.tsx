@@ -11,6 +11,15 @@ const Header = () => {
             height={100}
             className="w-44 md:w-56 pb-10 md:pb-0 object-contain"
         />
+        <div>
+            {/* Search Box */}
+            <form>
+                <input type="text" />
+                <button hidden>Search</button>
+            </form>
+
+            {/* Avatar */}
+        </div>
     </header>
   )
 }
