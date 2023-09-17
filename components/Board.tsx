@@ -7,10 +7,11 @@ import Column from './Column';
 import { start } from 'repl';
 
 const Board = () => {
-    const [board, getBoard, setBoardState] = useBoardStore((state) => [
+    const [board, getBoard, setBoardState, updateTodoInDB] = useBoardStore((state) => [
       state.board,
       state.getBoard,
       state.setBoardState,
+      state.updateTodoInDB,
     ]);
 
     useEffect(() => {
@@ -83,6 +84,8 @@ const Board = () => {
           id: finishCol.id,
           todos: finishTodos,
         });
+
+        updateTodoInDB(todoMoved, finishCol.id);
 
         setBoardState({ ...board, columns: newColumns });
       }
